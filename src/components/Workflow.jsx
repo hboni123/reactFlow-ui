@@ -1,10 +1,9 @@
-// src/components/Workflow.js
 
 import React, { useEffect, useState } from 'react';
 import ReactFlow, { MiniMap, Controls, Background } from 'reactflow';
 import 'reactflow/dist/style.css';
 import CustomNode from './CustomNode';
-import CustomEdge from './CustomEdge'; // import CustomEdge
+import CustomEdge from './CustomEdge'; 
 import initialNodes from '../utils/initialNodes';
 import initialEdges from '../utils/initialEdges';
 
@@ -13,13 +12,13 @@ const nodeTypes = {
 };
 
 const edgeTypes = {
-  customEdge: CustomEdge, // define custom edge type
+  customEdge: CustomEdge, 
 };
 
 const Workflow = () => {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
-  const [formData, setFormData] = useState({ name: 'Boni', dob: '1980-01-12', gender: 'F', pincode: '40199' });
+  const [formData, setFormData] = useState({ name: 'Boni', dob: '1900-01-12', gender: 'M', pincode: '40199' });
   const [activeNodes, setActiveNodes] = useState(['1', '2']); // Initialize with id 1 and id 2 always active
 
   useEffect(() => {
@@ -30,12 +29,6 @@ const Workflow = () => {
         isActive: activeNodes.includes(node.id),
       },
     }));
-    // const updatedEdges = edges.map(edge => ({
-    //   ...edge,
-    //   data: {
-    //     isActive: activeNodes.includes(node.id),
-    //   },
-    // }));
     setNodes(updatedNodes);
   }, [activeNodes]);
 
@@ -96,12 +89,12 @@ const Workflow = () => {
 
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>
-      <div style={{ width: '100%', height: '100%' }}>
+      <div style={{ width: '2000px', height: '100%' }}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
           nodeTypes={nodeTypes}
-          edgeTypes={edgeTypes} // use custom edge types
+          edgeTypes={edgeTypes}
           fitView
           attributionPosition="bottom-right"
         >
