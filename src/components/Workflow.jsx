@@ -18,7 +18,7 @@ const edgeTypes = {
 const Workflow = () => {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
-  const [formData, setFormData] = useState({ name: 'Boni', dob: '1900-01-12', gender: 'M', pincode: '40199' });
+  const [formData, setFormData] = useState({ name: 'Boni', dob: '1900-01-12', gender: 'M', pincode: '301' });
   const [activeNodes, setActiveNodes] = useState(['1', '2']); // Initialize with id 1 and id 2 always active
 
   useEffect(() => {
