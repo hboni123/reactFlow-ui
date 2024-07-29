@@ -1,6 +1,5 @@
 import React from 'react';
-import '../styles/Navbar';
-
+import "../styles/Navbar.css"
 const Navbar = ({workflowName}) => {
     return (
         <div className="navbar">
